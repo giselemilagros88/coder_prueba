@@ -4,8 +4,22 @@
     box-sizing:border-box;
 }
 
+.contenedor{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:1rem;
+    margin:1rem;
+
+}
+
 .titulo{
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+}
+
+.box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
