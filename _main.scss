@@ -1,0 +1,233 @@
+.container{
+    width: $ancho;
+    @include miMixin2(500px,5px solid black,$bg-color-green);
+
+    .container__boton{
+        width: 30%;
+        height: 1.5rem;
+        background-color: aquamarine;
+     }
+     /*USO DE EXTEND*/
+    /*al tener una clase principal, si tengo que cambiar algo del codigo de ahi, voy a esa clase 
+    padre que tiene la mayoria de los atributos
+    con extend, heredo esos atributos y puedo dar una particularidad a esa clase
+    es como pensar que tengo una plantilla de un boton, y luego puedo hacer muchos botones que tenga
+    algo agregado*/
+    .container__boton--verde{
+       /* @extend .container__boton;*/
+        width: 30%;
+        height: 1.5rem;
+        background-color: aquamarine;
+        background-color: $bg-color-green;
+        color:white;
+        /*agregar animaciones*/
+
+    }
+    
+}
+
+.div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+.boxi{
+    /*@extend .div;*/
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    width: 50%;
+    height: 50%;
+    border: 1px solid grey;
+}
+
+div{
+   /* @include flex-direction-center(row);*/
+   display:flex;
+   flex-direction:row;
+   justify-content:center;
+   
+
+}
+
+.box{
+    /*@include flex-direction-center(row);*/
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.contenedor-box{
+    /*@include flex-direction-center(column);*/
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.contenedor-grid{
+    @include grid-columns-row(4,auto);
+    display:block;
+   /* display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(auto, 1fr);*/
+}
+.contenedor-grid-dos{
+    @include grid-columns-row(1,3);
+   /* display:grid;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-rows:repeat(3, 1fr);*/
+}
+
+/*aca vemos como reutilizo el codigo y le paso otro valor a la propiedad*/
+.container__header{
+    width: 100%;
+
+    @include miMixin2(100px,$borde-principal,rgb(66, 59, 59));
+  
+}
+
+
+/*operadores
+en este ejemplo usamos un valor en % y el resultado da en %
+
+.col-12{
+    width: ($ancho / 12) * 12;
+    }
+.col-6{
+    width: ($ancho / 12) * 12;
+    }
+ */
+
+
+/*utilizo un mixin que dentro tiene condicionales*/
+.facebook{
+    @include redes(facebook);
+}
+
+.instagram{
+    @include redes(instagram);
+}
+
+.telegram{
+    @include redes(telegram);
+}
+
+
+/*uso de mapas con get */
+div {
+  background-color: map-get($estilos, color);/*dame del mapa que se llama estilos de la key que se llama color su valor*/
+  text-align: map-get($estilos, centro);
+  padding: map-get($estilos, 1rem);
+  font-size:map-get($estilos, tFuente);
+  color: $bg-color-green;
+}
+
+div{    
+    background-color: map-get($estilos, color);
+   /* background-color: $color-principal;*/
+}
+
+
+.container__boton{
+  @include miMixin2(100px,$borde);
+   
+}
+
+.container__boton--verde{
+   @include miMixin2(100px,$borde,$bg-color-green);
+
+}
+.main{
+    @include contenedor_grid($primary-color,center,center);
+}
+
+.box{
+    @include flex-row-center;
+    @include mixinHeight;
+}
+
+.container{
+    @include flex-row-center;
+}
+
+.footer{
+    @include flex-row-center;
+}
+
+.box2{
+	display:$flex;
+	flex-direction:$row;
+	justify-content:$center;
+}
+
+
+.div__empresa2{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    color: gray;
+    display:flex;
+    @include alineacion-flex(center,center);
+    background-color: rgb(179, 240, 179);
+}
+
+.div__empresa1{
+    @extend .div__empresa2;
+    @include alineacion-flex(center,right);
+    background-color: rgb(180,180,180);
+}
+
+.section__principal{
+    @include  flex-direction-justificar(column,space-around);
+    /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}
+.div__secundario{
+    @include  flex-direction-justificar(row,space-around);
+     /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}
+.div__tres{
+    @include  flex-direction-justificar(row,center);
+     /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}
+
+.div__cuatro{
+    @include  flex-direction-justificar($row,$space-between);
+     /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}
+.div__cinco{
+    @include  flex-direction-justificar($row,$space-evenly);
+     /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}
+.div__seis{
+    @include  flex-direction-justificar($column,$center);
+     /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}
+
+.div__siete{
+    @include  flex-direction-justificar(map-get($map-flex,row),map-get($map-flex, center));
+     /* display:flex;
+    flex-direction:column;
+    justify-content:space-around;*/
+}

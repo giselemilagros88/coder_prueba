@@ -1,0 +1,82 @@
+/*este mixin es posible, pero no es la forma optima de usarlo, porque no le paso 
+ningun modificador, entonces es recomendable en este caso usar extend*/
+
+@mixin mixinHeight{
+    height: 250px;
+}
+
+@mixin flex-row-center{
+	display:$flex;
+	flex-direction:row;
+	justify-content:center;
+}
+
+@mixin flex-column-center{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+@mixin flex-direction-center($direction){
+    display:flex;
+    flex-direction:$direction;
+    justify-content:center;
+}
+/*ujuustify tiene un valor por defecto que es un variable, si cuando llamamos al mixins no le pasamos ningun valor toamra el por defecto.*/
+@mixin flex-direction-justificar($direction,$justify:$center,$unBorde:1px solid black){
+    display:flex;
+    flex-direction:$direction;
+    justify-content:$justify;
+    border: $unBorde;
+}
+
+@mixin grid-columns-row($columns,$row){
+    display:grid;
+    grid-template-columns:repeat($columns, 1fr);
+    grid-template-rows:repeat($row, 1fr);
+}
+
+
+/*ahora este mixin recibe un valor, 
+en programación es lo que se llama una funcion
+yo defino una porcion de codigo y luego la llamo cuando la necesito
+en este caso esta recibiendo una variable que solo existe localmente en esta funcion(no es una variable global)*/
+@mixin miMixin2($valor,$borde-principal,$color:rgb(243, 86, 112)){
+    height:$valor;
+    /*puede tener mas variables que no reciben valor*/
+    background-color: aqua;
+    border:$borde-principal;
+    color:$color;
+}
+
+/*ver este ejemplo cuando veamos condicionales*/
+@mixin redes($nombre){
+    /*puedo poner un if dentro de una clase tambien */
+    @if $nombre == instagram{
+        color:#ff00ea;
+        /*sino sucede que nombre == instagram,*/
+    }@else if $nombre == facebook{
+        color:blue;
+    }@else if $nombre == tiktok{
+        color:rgb(231, 33, 33);
+    }@else { /*si no se cumple ninguna de las condiciones de arriba, entonces...*/
+        color:rgba(0, 0, 0, 0.336);
+    }
+
+}
+
+@mixin contenedor_grid($bgcolor,$justify,$aling){
+    background-color:$bgcolor;
+    display: grid;
+    justify-content: $justify;
+    align-items: $aling;
+}
+
+@mixin alineacion-flex($justify,$text-aling) {
+    justify-content: $justify;
+    text-align: $text-align;
+}
+
+
+
+

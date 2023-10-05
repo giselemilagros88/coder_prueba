@@ -1,0 +1,457 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Dongle&family=Fjalla+One&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Roboto:wght@400;500&family=The+Nautigal:wght@700&display=swap");
+/*maps*/
+/*este mixin es posible, pero no es la forma optima de usarlo, porque no le paso 
+ningun modificador, entonces es recomendable en este caso usar extend*/
+/*ujuustify tiene un valor por defecto que es un variable, si cuando llamamos al mixins no le pasamos ningun valor toamra el por defecto.*/
+/*ahora este mixin recibe un valor, 
+en programación es lo que se llama una funcion
+yo defino una porcion de codigo y luego la llamo cuando la necesito
+en este caso esta recibiendo una variable que solo existe localmente en esta funcion(no es una variable global)*/
+/*ver este ejemplo cuando veamos condicionales*/
+/*la $i es una variable local del for que toma el valor de cada vuelta que se repite
+en este caso dice que empieza en 1 y termina en 10 vueltas, cuando $i vale 10 se corta el bucle
+@for $i from 1 to 10 el to no tiene encuenta el valor final*/
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-1 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 10%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-2 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 20%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-3 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 30%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-4 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 40%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-5 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 50%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-6 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 60%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-7 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 70%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-8 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 80%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-9 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 90%;
+}
+
+/*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+para que sass sepa que es una variable
+se usa como se ve en la linea siguiente */
+.col-10 {
+  /* aca no necesito poner la variable entre las llaves */
+  width: 100%;
+}
+
+/*al final del bucle aumenta el valor de la variable del bucle $i para variable que empieza en 1 hasta 9 */
+/*recuerden que la variable $size*/
+.font-10px {
+  font-size: 10px;
+}
+
+.font-12px {
+  font-size: 12px;
+}
+
+.font-14px {
+  font-size: 14px;
+}
+
+.font-20px {
+  font-size: 20px;
+}
+
+.font-30px {
+  font-size: 30px;
+}
+
+.font-1rem {
+  font-size: 1rem;
+}
+
+.font-3rem {
+  font-size: 3rem;
+}
+
+/*con la r accedo al nombre de la clave
+con $color accedo al valor de la clave*/
+.red-face {
+  background-color: blue;
+}
+
+.red-instagram {
+  background-color: rgb(196, 14, 251);
+}
+
+.red-telegram {
+  background-color: rgb(15, 1, 64);
+}
+
+.red-tiktok {
+  background-color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  /*puede tener mas variables que no reciben valor*/
+  background-color: aqua;
+  border: 5px solid black;
+  color: green;
+  /*USO DE EXTEND*/
+  /*al tener una clase principal, si tengo que cambiar algo del codigo de ahi, voy a esa clase 
+  padre que tiene la mayoria de los atributos
+  con extend, heredo esos atributos y puedo dar una particularidad a esa clase
+  es como pensar que tengo una plantilla de un boton, y luego puedo hacer muchos botones que tenga
+  algo agregado*/
+}
+.container .container__boton, .container .container__boton--verde {
+  width: 30%;
+  height: 1.5rem;
+  background-color: aquamarine;
+}
+.container .container__boton--verde {
+  background-color: green;
+  color: white;
+  /*agregar animaciones*/
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contenedor-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/*aca vemos como reutilizo el codigo y le paso otro valor a la propiedad*/
+.container__header {
+  width: 100%;
+  height: 100px;
+  /*puede tener mas variables que no reciben valor*/
+  background-color: aqua;
+  border: 1px solid black;
+  color: rgb(66, 59, 59);
+}
+
+/*operadores
+en este ejemplo usamos un valor en % y el resultado da en %
+
+.col-12{
+    width: ($ancho / 12) * 12;
+    }
+.col-6{
+    width: ($ancho / 12) * 12;
+    }
+ */
+/*utilizo un mixin que dentro tiene condicionales*/
+.facebook {
+  /*puedo poner un if dentro de una clase tambien */
+  color: blue;
+}
+
+.instagram {
+  /*puedo poner un if dentro de una clase tambien */
+  color: #ff00ea;
+  /*sino sucede que nombre == instagram,*/
+}
+
+.telegram {
+  /*puedo poner un if dentro de una clase tambien */
+  /*si no se cumple ninguna de las condiciones de arriba, entonces...*/
+  color: rgba(0, 0, 0, 0.336);
+}
+
+/*uso de mapas con get */
+div {
+  background-color: #3673D9;
+  text-align: center;
+  padding: 1rem;
+  font-size: 35px;
+}
+
+div {
+  background-color: #3673D9;
+}
+
+.container__boton, .container .container__boton--verde {
+  height: 100px;
+  /*puede tener mas variables que no reciben valor*/
+  background-color: aqua;
+  border: 5px solid black;
+  color: rgb(243, 86, 112);
+}
+
+.container__boton--verde {
+  height: 100px;
+  /*puede tener mas variables que no reciben valor*/
+  background-color: aqua;
+  border: 5px solid black;
+  color: green;
+}
+
+.main {
+  background-color: pink;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 250px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.div__empresa2, .div__empresa1 {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(179, 240, 179);
+}
+
+.div__empresa1 {
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(180, 180, 180);
+}
+
+.section__principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.div__secundario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.div__tres {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.div__cuatro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.div__cinco {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.div__seis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.div__siete {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  /* display:flex;
+  flex-direction:column;
+  justify-content:space-around;*/
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid gray;
+}
+
+.boxDos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid grey;
+}
+
+/*mixins que son ?
+son bloques de codigo que se pueden reutilizar
+una de las mayores diferencias con Extend,es que los mixins pueden recibir argumentos
+osea la puedo modificar con un valor que yo quiero 
+
+extends que es ?
+
+es la reutilizacion de una porcion de codigo de otra clase, para no repetir.
+pero no se puede modificar.
+
+operadores: se puede sumar, restar, multiplicar 
+
+
+condicionales: si se cumple una condicion planteada, entonces ejecuta el codigo que esta dentro
+
+si pasa algo, entonces tal cosa, sino tal otra
+
+en las condiciones puedo incluir comparadores como el ==, != , < o >
+if:(si condicional)
+
+bucles : es una porcion de codigo que se va a repetir mas de una vez si se cumple una condicion
+si se deja de cumplir la condicion el bucle termina.es una iteracion.
+
+For :(Para)
+@for $var from through 
+
+EACH:
+en cada valor sucede algo 
+
+@each $variable in valores separados por coma{
+}
+
+MAPS:
+son variables cuyo valor es una coleccion
+clave : valor, 
+
+*//*# sourceMappingURL=estilos.css.map */

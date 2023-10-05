@@ -1,0 +1,55 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'bucles';
+@import 'main';
+
+
+.box{
+    @include flex-direction-justificar($column,$space-evenly,2px solid gray);
+}
+
+.boxDos{
+    @include flex-direction-justificar($row,$space-between,1px solid grey);
+}
+
+
+/*mixins que son ?
+son bloques de codigo que se pueden reutilizar
+una de las mayores diferencias con Extend,es que los mixins pueden recibir argumentos
+osea la puedo modificar con un valor que yo quiero 
+
+extends que es ?
+
+es la reutilizacion de una porcion de codigo de otra clase, para no repetir.
+pero no se puede modificar.
+
+operadores: se puede sumar, restar, multiplicar 
+
+
+condicionales: si se cumple una condicion planteada, entonces ejecuta el codigo que esta dentro
+
+si pasa algo, entonces tal cosa, sino tal otra
+
+en las condiciones puedo incluir comparadores como el ==, != , < o >
+if:(si condicional)
+
+bucles : es una porcion de codigo que se va a repetir mas de una vez si se cumple una condicion
+si se deja de cumplir la condicion el bucle termina.es una iteracion.
+
+For :(Para)
+@for $var from through 
+
+EACH:
+en cada valor sucede algo 
+
+@each $variable in valores separados por coma{
+}
+
+MAPS:
+son variables cuyo valor es una coleccion
+clave : valor, 
+
+*/
+
+

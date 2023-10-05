@@ -1,0 +1,83 @@
+/*.header{
+    background-color:gray;
+}
+
+
+.colorPropio{
+    background-color:gray;
+}
+.flexible{
+    width: 100%;
+    justify-content: flex-end;
+}*/
+.colorLink:hover{
+    color: green;
+}
+
+
+
+.header{
+    background-color:gray;
+}
+.header .colorPropio{
+    background-color:gray;
+}
+
+.header .colorPropio .flexible{
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.header .colorPropio .flexible .colorLink{
+    color: $primary-color;
+}
+.header .colorPropio .flexible .colorLink:hover{
+    color: green;
+}
+
+.header{ /*header*/
+    background-color:gray;
+    .colorPropio{ /*nav*/
+        background-color:gray;
+        .flexible{/*ul*/
+            width: 100%;
+            justify-content: flex-end;
+            .colorLink{ /*a*/
+                color: $primary-color;
+                &:hover{
+                    color: green;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    .header{ /*header*/
+      
+        .colorPropio{ /*nav*/
+          
+            .flexible{/*ul*/
+                flex-direction: row;
+                justify-content: center;
+                .colorLink{ /*a*/
+                  
+                    &:hover{
+                        color: rgb(0, 70, 128);
+                    }
+                }
+            }
+        }
+        
+    }
+    /*
+    .flexible{
+       
+        flex-direction: row;
+        justify-content: center;
+    }
+    .colorLink:hover{
+        color: rgb(0, 70, 128);
+    }*/
+}

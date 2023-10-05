@@ -1,0 +1,46 @@
+/*la $i es una variable local del for que toma el valor de cada vuelta que se repite
+en este caso dice que empieza en 1 y termina en 10 vueltas, cuando $i vale 10 se corta el bucle
+@for $i from 1 to 10 el to no tiene encuenta el valor final*/
+@for $i from 1 through 10{
+    /*lo que estoy haciendo aca es formar el nombre de la clase con la variable
+    en cada vuelta, la variable va a valer de 1 a 10, y la clase va a ser 
+    col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10
+    para que sass sepa que es una variable
+    se usa como se ve en la linea siguiente */
+   
+    .col-#{$i}   {
+        /* aca no necesito poner la variable entre las llaves */
+        width: calc(100% / 10) * $i ;
+    }
+} /*al final del bucle aumenta el valor de la variable del bucle $i para variable que empieza en 1 hasta 9 */
+
+
+
+
+/*recuerden que la variable $size*/
+
+
+@each $size in 10px, 12px, 14px , 20px,30px, 1rem,3rem{
+
+    .font-#{$size}{
+        font-size: $size;
+
+    }
+
+}
+
+
+/*con la r accedo al nombre de la clave
+con $color accedo al valor de la clave*/
+@each $key, $valor in $redes{
+    .red-#{$key}{
+        background-color: $valor;
+       
+    }
+}
+
+
+
+.#{$fuentes_negrita}{
+    font-weight: $fuentes_negrita;
+}
